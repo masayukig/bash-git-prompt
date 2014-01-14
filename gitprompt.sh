@@ -63,13 +63,13 @@ function git_prompt_config()
   local PathShort="\w"
 
   if [ "x${GIT_PROMPT_START}" == "x" ]; then
-    PROMPT_START="${Yellow}${PathShort}${ResetColor}"
+    PROMPT_START="${Yellow}\u@\h:${PathShort}${ResetColor}"
   else
     PROMPT_START="${GIT_PROMPT_START}"
   fi
 
   if [ "x${GIT_PROMPT_END}" == "x" ]; then
-    PROMPT_END=" \n\u@\h:${White}${Time12a}${ResetColor} $ "
+    PROMPT_END=" \n${White}${Time12a}${ResetColor} $ "
   else
     PROMPT_END="${GIT_PROMPT_END}"
   fi
